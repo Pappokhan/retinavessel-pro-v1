@@ -9,13 +9,13 @@ numpy
 pandas
 scikit-image
 scipy
-opencv-python-headles
+opencv-python-headless
 
 # Data visualization
 plotly
 matplotlib
 
-# MLops and monitoring
+# MLOps and monitoring
 mlflow
 psutil
 prometheus-client
@@ -26,7 +26,7 @@ pydantic
 pyyaml
 watchdog
 
-# Development
+# Development (optional, remove in production)
 black
 flake8
 pytest
