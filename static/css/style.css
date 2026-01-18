@@ -1,0 +1,230 @@
+/* ────────────────────────────────────────────────
+   Reset & Global Base ─ 2025–2026 clean aesthetic
+───────────────────────────────────────────────── */
+* {
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    box-sizing: border-box;
+}
+
+:root {
+    --accent: #0f766e;
+    --accent-dark: #115e59;
+    --text-primary: #111827;
+    --text-secondary: #4b5563;
+    --border: #e5e7eb;
+    --bg: #fafafa;
+    --card: #ffffff;
+}
+
+.stApp {
+    background: var(--bg);
+}
+
+/* Better heading contrast & spacing */
+h1, h2, h3, h4 {
+    color: var(--text-primary);
+    letter-spacing: -0.025em;
+}
+
+/* ────────────────────────────────────────────────
+   Header ─ executive, calm authority
+───────────────────────────────────────────────── */
+.header {
+    background: var(--accent);
+    color: white;
+    padding: 2.25rem 2rem;
+    border-radius: 10px;
+    margin: 0 0 2.5rem;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.4rem;
+    font-weight: 800;
+}
+
+.subtitle {
+    margin: 0.8rem 0 0;
+    font-size: 1.225rem;
+    font-weight: 400;
+    opacity: 0.95;
+}
+
+.tagline {
+    margin: 0.5rem 0 0;
+    font-size: 0.975rem;
+    opacity: 0.9;
+}
+
+/* ────────────────────────────────────────────────
+   Tabs ─ modern underlined style (very common in 2025 dashboards)
+───────────────────────────────────────────────── */
+.stTabs [data-baseweb="tab-list"] {
+    background: var(--card);
+    border-bottom: 1px solid var(--border);
+    padding: 0 0.5rem;
+    border-radius: 0;
+    box-shadow: none;
+    gap: 0;
+}
+
+.stTabs [data-baseweb="tab"] {
+    height: 46px;
+    background: transparent;
+    border-radius: 0;
+    margin: 0 0.75rem;
+    padding: 0 1.25rem;
+    color: var(--text-secondary);
+    font-weight: 600;
+    font-size: 0.975rem;
+    border-bottom: 3px solid transparent;
+    transition: color 0.18s ease, border-color 0.18s ease;
+}
+
+.stTabs [data-baseweb="tab"]:hover {
+    color: var(--text-primary);
+    border-bottom-color: #d1d5db;
+}
+
+.stTabs [aria-selected="true"] {
+    color: var(--accent);
+    border-bottom: 3px solid var(--accent);
+}
+
+/* ────────────────────────────────────────────────
+   Buttons ─ confident, minimal lift
+───────────────────────────────────────────────── */
+.stButton > button {
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 0.7rem 1.4rem;
+    font-weight: 600;
+    font-size: 0.96rem;
+    transition: all 0.18s ease;
+}
+
+.stButton > button:hover {
+    background: var(--accent-dark);
+    box-shadow: 0 2px 8px rgba(15, 118, 110, 0.18);
+    transform: translateY(-1px);
+}
+
+.stButton > button:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/* ────────────────────────────────────────────────
+   Metric Cards ─ clean, elevated, hover-aware
+───────────────────────────────────────────────── */
+[data-testid="stMetric"] {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.35rem 1.25rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    transition: all 0.16s ease;
+}
+
+[data-testid="stMetric"]:hover {
+    border-color: #cbd5e1;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+[data-testid="stMetricValue"] {
+    font-size: 2.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+[data-testid="stMetricLabel"] {
+    color: #6b7280;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+/* Dataframe / Table */
+[data-testid="stDataFrame"] {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    background: white;
+}
+
+/* Alerts */
+.stAlert {
+    border-radius: 6px;
+    border-left-width: 4px;
+    background: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+/* Progress */
+.stProgress > div > div > div {
+    background-color: var(--accent);
+}
+
+/* Sidebar */
+section[data-testid="stSidebar"] > div:first-child {
+    background: white;
+    border-right: 1px solid var(--border);
+}
+
+/* Slider */
+.stSlider .css-1cpxqw2 {
+    background: var(--accent);
+}
+
+/* Scrollbar ─ almost invisible until needed */
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: #9ca3af80;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #6b7280;
+}
+
+/* ────────────────────────────────────────────────
+   Very subtle entrance fade (professional touch)
+───────────────────────────────────────────────── */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(4px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+[data-testid="stMetric"],
+.stAlert,
+.upload-prompt {
+    animation: fadeIn 0.4s ease-out;
+}
+
+/* ────────────────────────────────────────────────
+   Mobile
+───────────────────────────────────────────────── */
+@media (max-width: 768px) {
+    .header {
+        padding: 1.8rem 1.25rem;
+        border-radius: 8px;
+    }
+    .header h1 {
+        font-size: 2rem;
+    }
+    .subtitle {
+        font-size: 1.1rem;
+    }
+    .stTabs [data-baseweb="tab"] {
+        margin: 0 0.4rem;
+        padding: 0 1rem;
+        font-size: 0.92rem;
+    }
+}

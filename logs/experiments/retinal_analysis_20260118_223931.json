@@ -1,0 +1,19 @@
+{
+  "experiment_name": "retinal_analysis",
+  "parameters": {
+    "threshold": 0.5,
+    "image_size": [
+      1280,
+      960
+    ]
+  },
+  "metrics": {
+    "confidence": 0.048982419073581696,
+    "vessel_density": 0.0419464111328125
+  },
+  "tags": [
+    "production",
+    "inference"
+  ],
+  "timestamp": "2026-01-18T22:39:31.679028"
+}
