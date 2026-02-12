@@ -25,8 +25,3 @@ python-dotenv
 pydantic
 pyyaml
 watchdog
-
-# Development (optional, remove in production)
-black
-flake8
-pytest
